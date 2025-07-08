@@ -1,4 +1,4 @@
-package com.ayshriv.smartticketai.repository.DTO;
+package com.ayshriv.smartticketai.resources.DTO;
 
 import lombok.Data;
 
