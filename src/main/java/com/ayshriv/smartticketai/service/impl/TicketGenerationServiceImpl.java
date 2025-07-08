@@ -45,14 +45,11 @@ public class TicketGenerationServiceImpl implements ITicketGenerationService {
                 .trim();
 
         try {
-            List<JiraTicketDto> tickets = objectMapper.readValue(cleanJson, new TypeReference<>() {});
+            List<JiraTicketDto> tickets = objectMapper.readValue(cleanJson, new TypeReference<>() {
+            });
             return new ApiResponse<>(true, "Tickets generated successfully", tickets);
         } catch (Exception e) {
             throw new RuntimeException("Failed to parse AI response to JSON: " + e.getMessage());
         }
     }
-
-
-
-
 }
